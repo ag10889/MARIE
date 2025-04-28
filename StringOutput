@@ -1,0 +1,30 @@
+ORG 100
+Getch, LoadI Chptr / Load the character found at address chptr.
+Skipcond 400 / If the character is a null, we are done.
+Jump Outp / Otherwise, proceed with operation.
+Halt
+Outp, Output / Output the character.
+Load Chptr / Move pointer to
+Add One / next character.
+Store Chptr
+Jump Getch
+One, Hex 0001
+Chptr, Hex 10B
+
+String, Dec 65 / A
+Dec 108 / l
+Dec 101 / e
+Dec 120 / x
+
+Dec 10 / [space]
+
+Dec 71 / G
+Dec 101 / e
+Dec 111 / o
+Dec 114 / r
+Dec 103 / g
+Dec 101 / e
+
+Dec 000 / [null]
+
+
