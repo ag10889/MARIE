@@ -1,0 +1,30 @@
+LOAD 		X			/
+		SKIPCOND	800			
+		JUMP		else		
+		SKIPCOND	0C00
+		JUMP		ielse
+		LOAD		Y  	
+		ADD V
+		STORE Y					
+		JUMP		ielse		
+
+else,	LOAD		Y		
+		SUBT V
+		STORE Y					
+
+ielse,	LOAD Z					
+		Add V
+		STORE Z
+		
+end, 	LOAD X
+		OUTPUT
+		LOAD Y 
+		OUTPUT
+		LOAD Z
+		OUTPUT
+		HALT
+/ variables
+X,	Dec 3
+Y,	Dec 5
+Z,	Dec 3
+V,	Dec 1
