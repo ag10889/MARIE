@@ -1,0 +1,22 @@
+WHILE,		LOAD		COUNT		/ load count into AC
+			SKIPCOND	400			/ skip if AC == 0
+			JUMP		DO			/ jump to DO
+			JUMP		END			/ jump to END
+
+DO,			LOAD		COUNT
+			OUTPUT					
+			LOAD		SUM
+			ADD 		VALONE
+			STORE		SUM
+			LOAD 		COUNT
+			SUBT		ONE			
+			STORE		COUNT		
+			JUMP		WHILE		/ jump to while
+
+END,		LOAD SUM
+			OUTPUT
+			HALT
+COUNT,		DEC			10
+ONE,		DEC			1
+VALONE,		DEC			1
+SUM,		DEC 		0
